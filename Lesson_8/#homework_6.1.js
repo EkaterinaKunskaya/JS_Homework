@@ -4,7 +4,7 @@ function Animal(name) {
     var foodAmount = 0;
 
     this.dailyNorm = function (amount) {
-        if (!amount) return formatFoodAmount(foodAmount);
+        if (!amount) return formatFoodAmount();
 
         if (amount < 50) {
             throw new Error("Количество корма не должно быть менее 50 грамм.");
@@ -14,33 +14,30 @@ function Animal(name) {
         }
 
         foodAmount = amount;
-        formatFoodAmount(foodAmount)
     };
 
     this.feed = function () {
         console.log('Насыпаем в миску ' + self.dailyNorm() + ' корма.');
     };
 
-    function formatFoodAmount(foodAmount) {
+    function formatFoodAmount() {
         return foodAmount + ' гр.';
     }
 }
 
 function Cat(name) {
-    Animal.call(this);
+    Animal.apply(this, arguments);
     var animalFeed = this.feed;
 
-    var self = this;
-
-    self.feed = function () {
+    this.feed = function () {
         animalFeed();
         console.log('Кот доволен ^_^');
-        return self;
+        return this;
     }
 
-    self.stroke = function () {
+    this.stroke = function () {
         console.log('Гладим кота.');
-        return self;
+        return this;
     }
 
 }
