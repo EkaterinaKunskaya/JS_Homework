@@ -1,0 +1,87 @@
+body {
+    background: #3b3939;
+}
+
+button {
+    font-family: serif;
+    width: 200px;
+    height: 30px;
+    float: left;
+    margin: 25px 100px;
+    padding: 5px;
+    border-radius: 5px 5px 5px 5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    background: rgb(207, 206, 206);
+}
+
+.output {
+    background: #fff;
+    padding: 2em;
+    width: 621px;
+    height: 140px;
+    position: relative;
+    border-radius: 0 0px 5px 5px;
+    margin-left: 105px;
+}
+
+.tabs {
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.tab {
+    font-family: serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    width: 80px;
+    float: left;
+    background: rgb(207, 206, 206);
+    padding: 8px 15px;
+    margin-left: 5px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.tab.active {
+    background-color: rgb(253, 253, 253);
+    color: black;
+}
+
+.section {
+    display: none;
+    text-decoration: none;
+    font-family: serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-indent: 19%;
+    list-style: none;
+    width: 600px;
+    height: 140px;
+    line-height: 40px;
+}
+
+.section.active {
+    display: block;
+}
+
+img {
+    float: left;
+    padding-left: 60px;
+    margin: -40px;
+}
+
+.textError {
+    font-size: 50px;
+    color: red;
+    font-family: serif;
+    text-decoration: none;
+    text-align: center;
+}
